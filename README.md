@@ -34,10 +34,11 @@ fi
 
 Steps:
 
-1) Create a lambda function that pulls the names of the load balancers from Parameter Store, compares the IPs and updates the external lb if required (see lambdacode.py)
-2) Create an AWS EventBridge function that will fire when it sees a "RegisterTargets" event in CloudTrail for "elasticloadbalancing.amazonaws.com"
+1. Create a lambda function that pulls the names of the load balancers from Parameter Store, compares the IPs and updates the external lb if required (see lambdacode.py)
+2. Create an AWS EventBridge function that will fire when it sees a "RegisterTargets" event in CloudTrail for "elasticloadbalancing.amazonaws.com"
 
 e.g.
+```
 {
   "source": ["aws.elasticloadbalancing"],
   "detail-type": ["AWS API Call via CloudTrail"],
@@ -49,5 +50,5 @@ e.g.
     }
   }
 }
-
-3) Make the EventBridge call the Lambda Function
+```
+3. Make the EventBridge call the Lambda Function
