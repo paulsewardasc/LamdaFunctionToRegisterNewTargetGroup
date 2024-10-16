@@ -54,3 +54,5 @@ e.g.
 }
 ```
 3. Make the EventBridge call the Lambda Function
+
+## NOTE. Make sure the EventBridge is in the same region as the Lambda script and Load Balancers
