@@ -5,6 +5,7 @@ We have an internal load balancer that is updated by Terraform, when this change
 
 An bash script to do this would be:
 
+```
 #Notes:
 #SRC_ALB is defined as an environmental variable for the source ALB
 #TGT_ALC is defined as an environmental variable for the target ALB
@@ -31,6 +32,7 @@ if [ "$SIP" != "$TIP" ]; then
 else
   echo "The servers match: $SIP, $TIP"
 fi
+```
 
 Steps:
 
